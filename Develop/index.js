@@ -30,7 +30,7 @@ const questions = [{
 {
     type: "checkbox",
     name: "License",
-    choices: ['MIT', 'BSD 3-Clause', 'Apache 2.0', 'GNU v3.0', 'Mozilla', 'None']
+    choices: ['MIT License', 'BSD 3-Clause', 'Apache License', 'GNU v3.0', 'Mozilla License', 'None']
 },
 {   type: "input",
     name: "Installation",
@@ -48,9 +48,13 @@ const questions = [{
     name: "contribution",
     message: "provide details of contributing by the user"
 }
-
-
 ];
+
+inquirer.prompt(questions)
+.then(answers => {
+    console.log(answers)
+})
+
 
 // use fs.writeFileSync
 // TODO: Create a function to write README file

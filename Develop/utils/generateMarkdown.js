@@ -39,7 +39,9 @@ function generateMarkdown(data) {
   ## Questions
   If you have any questions about this repository, please contact me via ${data.email}. You can view more of my projects at https://github.com/${data.git}
   
+  
 `;
+console.log(data.Installation)
 }
 
 module.exports = generateMarkdown;

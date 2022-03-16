@@ -14,7 +14,7 @@ const questions = [{
 },
 {
     type: "type",
-    name: "usernme",
+    name: "git",
     message: "What is your github username?"
 },
 {
@@ -52,6 +52,7 @@ const questions = [{
 
 ];
 
+// use fs.writeFileSync
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 

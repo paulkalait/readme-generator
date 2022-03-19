@@ -62,6 +62,7 @@ function writeToFile(fileName, data) {
 function init() {
 inquirer.prompt(questions)
 .then(answers => {
+    //passingh through prompt answers into generatemarkdwon function Dynamically
     writeToFile("README.md", generateMarkdown(answers));
 })
 

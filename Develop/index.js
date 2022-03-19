@@ -47,6 +47,7 @@ const questions = [{
 {   type: "input",
     name: "contribution",
     //fix wording
+    // what did the user contribute
     message: "provide details of contributing by the user"
 }
 ];

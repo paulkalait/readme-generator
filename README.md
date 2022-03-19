@@ -1,7 +1,7 @@
 # Professional README Generator Starter Code
 
 ## Link to video:
-
+https://youtu.be/TuLSOPJvOiU
 
 ## Purpose: 
 This assignment was to create a generated readme that the user can create with the help of node and the inquirer module. 

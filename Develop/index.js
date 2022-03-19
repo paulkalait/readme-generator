@@ -1,9 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs')
-const utils = require('./utils/generateMarkdown')
+// const utils = require('./utils/generateMarkdown')
 
-// const generageMarkdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -30,7 +30,7 @@ const questions = [{
 {
     type: "checkbox",
     name: "License",
-    choices: ['MIT License', 'BSD 3-Clause', 'Apache License', 'GNU v3.0', 'Mozilla License', 'None']
+    choices: ['MIT', 'BSD', 'Apache', 'GNU', 'Mozilla', 'None']
 },
 {   type: "input",
     name: "Installation",
@@ -51,18 +51,21 @@ const questions = [{
 }
 ];
 
-inquirer.prompt(questions)
-.then(answers => {
-    console.log(answers)
-})
-
 
 // use fs.writeFileSync
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFileSync(fileName, data)
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+inquirer.prompt(questions)
+.then(answers => {
+    writeToFile("README.md", generateMarkdown(answers));
+})
+
+}
 
 // Function call to initialize app
 init();
